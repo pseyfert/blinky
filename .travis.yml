@@ -1,0 +1,17 @@
+sudo: false
+language: python
+cache: pip
+python:
+  - "3.6"
+
+jobs:
+  include:
+    - stage: test
+      script: pip install ${TRAVIS_BUILD_DIR}
+    - stage: test_cli_updates
+      script: diff ci_files/help.txt <(blinky -h)
+
+
+stages:
+  - test
+  - test_cli_updates

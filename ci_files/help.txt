@@ -1,0 +1,37 @@
+usage: blinky [-h]
+              [-S | -Sr | -Srr | -Ss | -complete | -Si | -Syu | -Sc | -Scc]
+              [--asdeps] [--force-review] [--local-path AUR_LOCAL]
+              [--keep-sources KEEP_SOURCES] [--build-only] [--verbose]
+              [--difftool DIFFTOOL]
+              [pkgname [pkgname ...]]
+
+AUR package management made easy
+
+positional arguments:
+  pkgname               packages to install/build
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -S                    Install package(s) from AUR
+  -Sr                   Reinstall package(s) from AUR (including rebuild)
+  -Srr                  Reinstall package(s) and dependencies from AUR
+                        (including rebuild)
+  -Ss                   Search for package(s) in AUR
+  -complete             completion helper
+  -Si                   Get detailed info on packages in AUR
+  -Syu                  Upgrade all out-of-date AUR-packages
+  -Sc                   Clean cache of all uninstalled package files
+  -Scc                  Clean cache of all package files, including installed
+  --asdeps              If packages are installed, install them as
+                        dependencies
+  --force-review        Force review even if exact copies of the files have
+                        already been reviewed positively
+  --local-path AUR_LOCAL
+                        Local path for building and cache
+  --keep-sources KEEP_SOURCES
+                        Keep sources, can be 'none', 'skipped', for keeping
+                        skipped packages only, or 'all'
+  --build-only          Only build, do not install anything
+  --verbose, -v
+  --difftool DIFFTOOL   specify tool used for diffing (must work via '<tool>
+                        file1 file2')
